@@ -1,3 +1,67 @@
-<p>
-  signup works!
-</p>
+<main class="form-article">
+    <div class="sign-up inview">
+    <div class="form-header">
+        <a ui-sref="login" class="logo"><img src="img/logo-popup.svg" class="inline middle" alt=""><span class="uppercase dark-blue inline middle font-17">SEATMETRICS</span></a>
+        <a ui-sref="login" class="btn have-account block-right">Have an account?</a>
+    </div>
+    <div class="form-content">
+        <h1 class="font-light m-b-30 relative text-center">Join SeatMetrics</h1>
+        <p class="text-center font-16" style="color:#535968;">Instant Access. No Credit Card Required. <br> Unlimited Use. Thirty Day Free Trial.</p>
+        <form id="sign-up-form" name="signupForm" novalidate="novalidate" ng-submit="doSignup(signupForm.$valid)">
+            <label class="signup-item1" >
+                <span>First Name*</span>
+                <input type="text" name="first_name" id="first_name" sm-input-style ng-model="signupData.firstName"
+                       required ng-class="{'error' : signupForm.first_name.$invalid && !signupForm.first_name.$pristine }">
+                <label ng-show="signupForm.first_name.$invalid && !signupForm.first_name.$pristine" for="first_name"
+                       class="error">This field is required.</label>
+            </label>
+            <label class="signup-item2">
+                <span>Last Name*</span>
+                <input type="text" name="last_name" id="last_name" sm-input-style ng-model="signupData.lastName"
+                       required ng-class="{'error' : signupForm.last_name.$invalid && !signupForm.last_name.$pristine}">
+                <label ng-show="signupForm.last_name.$invalid && !signupForm.last_name.$pristine" for="last_name"
+                       class="error">This field is required.</label>
+            </label>
+            <label class="signup-item3">
+                <span>Phone*</span>
+                <input type="text" maxlength="14" class="phone-us" id="phone_us" name="phone_us" sm-input-style
+                       ng-model="signupData.phone" required ng-class="{'error' : signupForm.phone_us.$invalid && !signupForm.phone_us.$pristine}">
+                <label ng-show="signupForm.phone_us.$invalid && !signupForm.phone_us.$pristine" for="phone_us"
+                       class="error">This field is required.</label>
+            </label>
+            <label class="signup-item4">
+                <span>Company*</span>
+                <input type="text" name="company" id="company" sm-input-style ng-model="signupData.company" required
+                       ng-class="{'error' : signupForm.company.$invalid && !signupForm.company.$pristine}">
+                <label ng-show="signupForm.company.$invalid && !signupForm.company.$pristine" for="company"
+                       class="error">This field is required.</label>
+            </label>
+            <label class="signup-item5">
+                <span>E-mail*</span>
+                <input type="email" name="email" id="email" sm-input-style ng-model="signupData.email"
+                       ng-class="{'error' : signupForm.email.$invalid && !signupForm.company.$pristine}">
+                <label ng-show="signupForm.email.$invalid && !signupForm.company.$pristine" for="company"
+                       class="error">Please enter a valid email address.</label>
+            </label>
+            <label class="signup-item6">
+                <span>Password*</span>
+                <input type="password" name="password" id="password" sm-input-style ng-model="signupData.password"
+                       ng-minlength="5" ng-maxlength="10" ng-class="{'error' : signupForm.password.$invalid && !signupForm.password.$pristine}">
+                <label ng-show="signupForm.password.$error.minlength" for="password"
+                       class="error">Password must be 5 characters minimum</label>
+                <label ng-show="signupForm.password.$error.maxlength" for="password"
+                       class="error">Password must be 10 characters maximum</label>
+            </label>
+            <div class="check-box signup-item7">
+                <input type="checkbox" id="agree-box" name="agree" ng-model="signupData.agree" required>
+                <label for="agree-box">
+                    <div></div>
+                    <p>I agree to the SeatMetrics <a href="../terms-service.php" target="_new">Terms of Use</a> &amp; <a href="../privacy-policy.php" target="_new">Privacy Policy</a>.</p>
+                    <span class="clearfix"></span>
+                </label>
+            </div>
+            <button type="submit" class="btn signup-item8 join-btn" ng-disabled="signupForm.$invalid">JOIN SEATMETRICS</button>
+        </form>
+    </div>
+</div>
+</main>

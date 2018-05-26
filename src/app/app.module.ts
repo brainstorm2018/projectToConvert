@@ -47,7 +47,8 @@ import { StubhubQtyPipe } from './filters/stubhub-qty.pipe';
     StubhubQtyPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
