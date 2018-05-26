@@ -23,6 +23,8 @@ import { SmInputStyleDirective } from './directives/sm-input-style.directive';
 import { StubhubPriceRangePipe } from './filters/stubhub-price-range.pipe';
 import { StubhubQtyPipe } from './filters/stubhub-qty.pipe';
 
+// libraries
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { StubhubQtyPipe } from './filters/stubhub-qty.pipe';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
