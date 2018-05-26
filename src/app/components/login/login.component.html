@@ -1,3 +1,61 @@
-<p>
-  login works!
-</p>
+<!-- BEGIN MAIN -->
+<main class="form-article">
+
+  <div class="login inview show-first">
+    <div class="form-header">
+
+    </div>
+    <div class="form-content">
+      <div class="verticalize verticalize--full">
+        <div class="verticalize__box relative login-box-container">
+          <!--<a class="logo"><img src="img/logo-popup.svg" class="block" alt=""></a>-->
+          <div class="login-box text-center">
+            <p class="uppercase block font-32"><span class="login-logo"></span>METRICS</p>
+            <form id="login-form" name="loginForm" role="form" novalidate="novalidate" ng-submit="doLogin(loginForm.$valid)">
+              <label>Email Address</label>
+              <label class="login-item1" ng-class="loginData.email.length != 0 ? 'active' : ''">
+                <span class="login-placeholder"><i class="fa fa-envelope-o"></i>Email</span>
+                <input type="email" id="email" name="email" autocomplete="on" ng-model="loginData.email">
+              </label>
+              <br>
+              <label>Password</label>
+              <label class="login-item2" ng-class="loginData.password.length != 0 ? 'active' : ''">
+                <span class="login-placeholder"><i class="fa fa-lock"></i>Password</span>
+                <input type="password" id="password" name="password" ng-model="loginData.password" required>
+              </label>
+              <a href="javascript:void(0)" class="block-right login-item3 forgot-password m-t-3 underline-hover">Forgot password?</a>
+              <div class="check-box inline login-item4">
+                <input type="checkbox" id="logged-in-box" name="rememberLogin" ng-model="loginData.rememberLogin">
+                <label for="logged-in-box">
+                  <div></div>
+                  <p class="remember-login">Remember me</p>
+                  <span class="clearfix"></span>
+                </label>
+              </div>
+              <div class="text-center login-item5">
+                <button type="submit" class="btn join-btn" ng-disabled="loginForm.$invalid">LOGIN</button>
+              </div>
+            </form>
+          </div>
+          <div class="forgot-pass-box text-left">
+            <h3 class="m-b-0 font-20 forgot-item1">Recover Your Password</h3>
+            <p class="font-12 forgot-item2">Enter your email and we’ll send you a password reset link.</p>
+            <form id="forgot-password-form" name="forgotPasswordForm" role="form" novalidate="novalidate" ng-submit="doForgotPassword()" >
+              <label class="forgot-item3">
+                <span>E-mail address</span>
+                <input type="email" name="email_login" required ng-model="email">
+              </label>
+              <button type="submit" class="btn join-btn forgot-item4" ng-disabled="forgotPasswordForm.$invalid">SEND</button>
+            </form>
+            <a href="javascript:void(0)" class="back-login forgot-item5"><span class="inline middle fa fa-angle-left m-r-10"></span><span class="inline middle">Back to Login</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-footer text-center">
+      <p class="inline middle font-17 dark-blue m-b-0">Don’t Have Account?</p>
+      <a ui-sref="signup" class="inline middle btn sign-up-footer">SIGN UP</a>
+    </div>
+  </div>
+</main>
+<!-- END MAIN -->
