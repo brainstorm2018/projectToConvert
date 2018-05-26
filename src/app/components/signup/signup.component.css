@@ -1,0 +1,133 @@
+/*******************************************************
+Style Sheet for the Login Page
+
+last modified: 14/05/2018 by João Santos
+author: João Santos
+email: joaoestrada@msn.com
+*******************************************************/
+
+/**********
+  * FONTS
+***********/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* Font 25 size*/
+.font-32 {
+    font-size: 32px !important;
+}
+
+/***********
+ * LOGIN BOX
+************/
+
+.form-article .form-content {
+    max-width: 425px;
+}
+
+.login-box {
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+
+/* Login Box Title*/
+.form-article {
+    /*background-image: url('../img/bkg.jpg');*/
+    background-image: url('../../../assets/img/bkg.jpg');
+    background-size: cover;
+}
+
+/* Login Box Title*/
+.login-box > p {
+    border-bottom: 1px solid rgb(230, 230, 230);
+    color: #202f56;
+    font-family: 'Ubuntu';
+    font-weight: 900;
+    margin-bottom: 40px;
+    margin-left: -50px;
+    margin-right: -50px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+.login-box-container {
+    box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Login Form*/
+.login-box form {
+    font-family: "Montserrat";
+    font-size: 13px !important;
+}
+
+input[type=email],
+input[type=password],
+input[type=text],
+textarea {
+    font-family: "Montserrat";
+}
+
+.login-box label span,
+#login-form label span,
+#sign-up-form label span,
+#stubhub-page-form .form-group span {
+    font-size: 13px;
+}
+
+/* Inut icons */
+.login-box form .fa {
+    margin-right: 10px;
+}
+
+/* Inputs */
+.login-placeholder {
+    font-size: 13px;
+}
+
+/* Form labels */
+.login-box form label {
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+/* Remember me Check Box */
+.form-article .check-box div,
+.form-article .check-box input:checked + label div {
+    height: 17px;
+    width: 17px;
+}
+
+/* Remember me and Forgot Password*/
+.remember-login,
+.forgot-password {
+    color: rgb(153, 153, 153) !important;
+    font-weight: normal;
+}
+
+.forgot-password {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-item5 button,
+.login-item5 button.btn[disabled] {
+    background-color: rgb(235, 118, 23) !important;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-size: 15px !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Sign Up Button */
+.form-article .form-footer .sign-up-footer {
+    background-color: rgb(32, 47, 86) !important;
+    font-size: 15px !important;
+}
+
